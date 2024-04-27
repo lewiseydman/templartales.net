@@ -2,20 +2,20 @@
     <div class="information">
         <div class="avatar"><img src="https://mc-heads.net/avatar/{{ player.name is empty ?  'Steve' : player.name }}/100/nohelm" /></div>
         <div class="info">
-            <div class="main">Logged as</div>
+            <div class="main">Signed in as</div>
             <div class="sub">{{ player.name is empty ? 'Guest' : player.name }}</div>
         </div>
         <div class="settings">
             {% if player.name is not empty %}
             <div class="logout">
-                <a href="/checkout/basket/forget"><i data-toggle="tooltip" title="" class="fas fa-sign-out-alt" data-original-title="Click to logout"></i></a>
+                <a href="/checkout/basket/forget"><i class="fas fa-sign-out-alt" data-toggle="tooltip" data-original-title="Logout"></i></a>
             </div>
             <div class="basket">
-                <a href="/checkout/basket"><i data-toggle="tooltip" title="" class="fas fa-shopping-basket" data-original-title="Checkout"></i></a>
+                <a href="/checkout/basket"><i class="fas fa-shopping-basket" data-toggle="tooltip" data-original-title="Checkout"></i></a>
             </div>
             {% else %}
             <div class="login">
-                <a href="/login"><i data-toggle="tooltip" title="" class="fas fa-sign-in-alt" data-original-title="Click to login"></i></a>
+                <a href="/login"><i class="fas fa-sign-in-alt" data-toggle="tooltip" data-original-title="Log-in"></i></a>
             </div>
             {% endif %}
         </div>
@@ -27,7 +27,7 @@
         <ul class="nav navbar-nav">
             <li><a href="/">{{ language.home }}</a></li>
             {% for category in categories %} {% if category.children %}
-            <li class="dropdown sleek-dropdown">
+            <li class="dropdown nav-dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                     {{ category.name }}
                     <span class="caret"></span>

@@ -19,7 +19,7 @@
                                 </td>
                                 <td class="pull-right">
                                     <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#package{{ package.id }}">
-                                        {{ language.more_info }}
+                                        <i class="fa-solid fa-cart-shopping"></i> {{ language.buy_now }}
                                     </button>
                                 </td>
                             </tr>
@@ -46,7 +46,7 @@
                                                 {{ package.priceCalculatedDiscounted|number_format(2, '.', ',') }} {% endif %} {{ store.currency }}
                                             </div>
                                             <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#package{{ package.id }}">
-                                                {{ language.more_info }}
+                                                <i class="fa-solid fa-cart-shopping"></i> {{ language.buy_now }}
                                             </button>
                                         </div>
                                     </div>
@@ -91,16 +91,16 @@
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">{{ language.close }}</button>
                     {% if category.cumulativeCategory %} {% if package.price - cumulativeDiscount > 0 %}
                     <a href="/package/{{ package.id }}">
-                        <button type="button" class="btn btn-primary">{{ language.buy_now }}</button>
+                        <button type="button" class="btn btn-primary"><i class="fa-solid fa-cart-shopping"></i> {{ language.buy_now }}</button>
                     </a>
                     {% endif %} {% else %}
                     <a href="/package/{{ package.id }}">
-                        <button type="button" class="btn btn-primary">{{ language.buy_now }}</button>
+                        <button type="button" class="btn btn-primary"><i class="fa-solid fa-cart-shopping"></i> {{ language.buy_now }}</button>
                     </a>
 
                     {% if package.subscriptionEnabled %}
                     <a href="/package/{{ package.id }}?subscription">
-                        <button type="button" class="btn btn-primary">{{ language.subscribe }}</button>
+                        <button type="button" class="btn btn-primary"><i class="fa-solid fa-repeat"></i> {{ language.subscribe }}</button>
                     </a>
                     {% endif %} {% endif %}
                 </div>

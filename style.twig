@@ -1,7 +1,7 @@
 :root {
     --main-color: #880808;
     --main-color-transparent: rgb(136, 8, 8, 0.6);
-    --sleek-logo-size: 350px;
+    --header-logo-size: 350px;
 }
 html {
     font-size: 15px !important;
@@ -10,12 +10,11 @@ body {
     background: #efefef;
     font-family: "Montserrat", sans-serif;
 }
-
 .logo {
     text-align: center;
 }
 .logo img {
-    width: var(--sleek-logo-size);
+    width: var(--header-logo-size);
     margin-bottom: 50px;
     animation: pulse 4s infinite;
     animation-timing-function: ease-in-out;
@@ -42,7 +41,7 @@ body {
 .headerbg {
     position: absolute;
     z-index: -1;
-    background: url(https://raw.githubusercontent.com/lewiseydman/templartales.net/main/templar.jpg);
+    background: url(https://raw.githubusercontent.com/lewiseydman/templartales.net/main/images/templar.jpg);
     top: 0;
     background-repeat: no-repeat;
     background-size: cover;
@@ -54,12 +53,6 @@ body {
 form#login {
     max-width: 595px;
     margin: auto;
-}
-form#login > .form-control {
-    height: 46px;
-}
-form#login > .btn-primary {
-    height: 46px;
 }
 .navbar {
     border: 0;
@@ -182,23 +175,19 @@ form#login > .btn-primary {
     display: grid;
     grid-template-columns: 84px auto;
 }
-
 .top-donator .data {
     margin: auto;
     margin-left: 10px;
 }
-
 .top-donator .data b {
     color: #373737;
 }
-
 .top-donator .avatar img {
     width: 64px;
 }
 .topdonator-module .panel-body {
     padding: 0;
 }
-
 .topdonator-module .avatar {
     height: 96px;
     position: relative;
@@ -441,7 +430,7 @@ footer .seekutils .block {
 .seekutils .block li a {
     color: #2c3e50;
 }
-.seek_themechanger {
+.themechanger {
     position: fixed;
     left: 0;
     top: 50%;
@@ -457,7 +446,7 @@ footer .seekutils .block {
     background: #fff;
     color: #272727;
 }
-.dark .seek_themechanger {
+.dark .themechanger {
     background: #272727;
     color: #fff;
 }
@@ -468,16 +457,27 @@ footer .seekutils .block {
     .seekrow .right img {
         margin: auto;
     }
-    .seek_themechanger {
+    .themechanger {
         top: unset;
         bottom: 12px;
     }
 }
+.btn:focus,
+.btn:focus-visible {
+    outline: 0px;
+    outline-offset: unset;
+}
 .btn-primary {
+    background-image: linear-gradient(to right, #e52d27 0%, #b31217  51%, #e52d27  100%);
+    background-color: unset;
+    padding: 15px 45px;
+    text-align: center;
     text-transform: uppercase;
-    border-radius: 4px;
-    background: #51c55d;
-    border: 0;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    border-radius: 10px;
+    border-color: rgba(0, 0, 0, 0.5) !important;
 }
 .item-text {
     font-size: 20px;
@@ -485,13 +485,16 @@ footer .seekutils .block {
 }
 .item-footer button {
     width: 100%;
-    border: transparent;
+    background-image: linear-gradient(to right, #e52d27 0%, #b31217  51%, #e52d27  100%);
+    background-color: unset;
+    padding: 15px 45px;
+    text-align: center;
     text-transform: uppercase;
-    color: rgba(0, 0, 0, 0.5);
-    font-weight: bold;
-    margin-top: 10px;
-    padding: 12px 24px;
-    border: 0;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    border-radius: 10px;
+    border-color: rgba(0, 0, 0, 0.5) !important;
 }
 .input-group .btn-primary {
     padding: 8px;
@@ -499,10 +502,15 @@ footer .seekutils .block {
 .item-footer button:hover,
 .item-footer button:focus,
 .item-footer button.focus,
+.item-footer button:active,
+.item-footer button.active,
 .item-footer button:focus:active,
 .item-footer button:hover:active {
-    background: #43b04f;
-    border: transparent;
+    background-image: linear-gradient(to right, #e52d27 0%, #b31217  51%, #e52d27  100%);
+    background-position: right center;
+    background-color: none;
+    color: #fff;
+    text-decoration: none;
 }
 .announce .bar .text p {
     margin: 0;
@@ -510,10 +518,15 @@ footer .seekutils .block {
 .btn-primary:hover,
 .btn-primary:focus,
 .btn-primary.focus,
+.btn-primary:active,
+.btn-primary.active,
 .btn-primary:focus:active,
 .btn-primary:hover:active {
-    background: #43b04f;
-    border: transparent;
+    background-image: linear-gradient(to right, #e52d27 0%, #b31217  51%, #e52d27  100%);
+    background-position: right center;
+    background-color: none;
+    color: #fff;
+    text-decoration: none;
 }
 .btn-secondary {
     padding: 8px;
